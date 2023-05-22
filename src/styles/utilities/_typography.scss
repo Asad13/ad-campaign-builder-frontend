@@ -1,0 +1,182 @@
+%heading {
+    font-family: $Circular;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -0.025em;
+}
+
+%body {
+    font-family: $Circular;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.025em;
+}
+
+.heading1 {
+    @extend %heading;
+    letter-spacing: 0.015em;
+    font-size: 32px;
+
+    @include media($md) {
+        font-size: 42px;
+    }
+
+    @include media($lg) {
+        font-size: 48px;
+    }
+}
+
+.heading2 {
+    @extend %heading;
+    font-size: 28px;
+
+    @include media($md) {
+        font-size: 40px;
+    }
+
+    @include media($lg) {
+        font-size: 52px;
+    }
+}
+
+.heading3 {
+    @extend %heading;
+    font-size: 22px;
+
+    @include media($md) {
+        font-size: 26px;
+    }
+
+    @include media($lg) {
+        font-size: 30px;
+    }
+
+    @include media($xl) {
+        font-size: 36px;
+    }
+}
+
+.heading4 {
+    @extend %heading;
+    font-size: 20px;
+    font-weight: medium;
+    line-height: 140%;
+
+    @include media($md) {
+        font-size: 24px;
+    }
+
+    @include media($lg) {
+        font-size: 28px;
+    }
+
+    @include media($xl) {
+        font-size: 32px;
+    }
+}
+
+.campaignHeading {
+    @extend %heading;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 127%;
+    color: $textPrimary;
+
+    @include media($md) {
+        font-size: 26px;
+    }
+
+    @include media($lg) {
+        font-size: 28px;
+    }
+
+    @include media($xl) {
+        font-size: 30px;
+    }
+}
+
+.uploadHeading {
+    font-family: $Circular;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 109%;
+}
+
+.heading5 {
+    @extend %heading;
+    font-size: 16px;
+    line-height: 140%;
+
+    @include media($md) {
+        font-size: 18px;
+    }
+
+    @include media($lg) {
+        font-size: 21px;
+    }
+
+    @include media($xl) {
+        font-size: 24px;
+    }
+}
+
+.campaignSubHeading {
+    @extend %heading;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 140%;
+    color: $textPrimary;
+
+    @include media($md) {
+        font-size: 18px;
+    }
+
+}
+
+.title {
+    @extend %heading;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 100%;
+
+    @include media($md) {
+        font-size: 18px;
+    }
+}
+
+.heading6 {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.tabHeading,
+.subHeading {
+    font-family: $Circular;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.bodyText1 {
+    @extend %body;
+    font-size: 14px;
+
+    @include media($lg) {
+        font-size: 16px;
+    }
+}
+
+.bodyText2 {
+    @extend %body;
+    font-size: 14px;
+    font-weight: 450;
+    line-height: 120%;
+}
+
+.buttonText {
+    font-family: $Circular;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+}

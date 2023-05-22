@@ -1,0 +1,91 @@
+/* Screen Sizes */
+$xs: 375;
+$sm: 640;
+$md: 768;
+$lg: 1024;
+$xl: 1280;
+$xxl: 1536;
+$xxxl: 1950;
+$xxxxl: 2250;
+/* Header */
+$hh: 60px;
+$hs: 60px;
+
+/* Spacing */
+$profileMarginBig: 50px auto;
+$profileMarginSmall: 25px auto;
+$profilePaddingBig: 50px;
+$pagePaddingBig: 0 50px;
+$pagePaddingBigWithSidebar: 0 50px 0 135px;
+$pagePaddingMedium: 0 35px;
+$pagePaddingMediumWithSidebar: 0 35px 0 90px;
+$profilePaddingSmall: 25px;
+$pagePaddingSmall: 0 25px;
+$pageWithSidebarPaddingLeft: 85px;
+$pagePaddingSmallWithSidebar: 0 25px 0 110px;
+$btnPadding: 6px 16px;
+$btnPadding2: 10px 18px;
+$inputPadding: 16px;
+$inputPadding2: 8px 12px;
+$inputPadding3: 12px 16px;
+
+/* Colors */
+$primary: #B69538;
+$textPrimary: #010101;
+$textSecondary: #515151;
+$hintTextColor: #878787;
+$hintTextColor2: #858585;
+$btnTextColor1: #747474;
+$black: #000000;
+$white: #ffffff;
+$whitef1: #f1f1f1;
+$colorSkyBlue: #3d9fd4;
+$background: #E5E5E5;
+$sideNavIconBackground: #F5F1E5;
+$sideNavIconColor: #A1A1A1;
+$underlineColor: #DFDFDF;
+$colorDanger: #dc3545;
+$colorWarning: #ffc107;
+$colorSuccess: #198754;
+$checkboxBorderColor: #D0D0D0;
+$radioLabel: #101828;
+$progressBackground: #EEE7D1;
+$bgColorStatus: #ECFDF3;
+$colorActive: #027948;
+$colorCompleted: #022A79;
+$smallItemBackground: #FAF6EB;
+$divider1: #D9D9D9;
+$labelColor: #344054;
+$btnTextColor2: #475467;
+$cardHeadingColor:  #292930;
+$modalBackground: rgba(0,0,0,0.4);
+
+/* Border Colors */
+$borderColor: rgba($textSecondary, .2);
+$borderColor2: #E4E7EC;
+
+/* Border Radiuses */
+$borderRadiusCircle: 9999px;
+$borderRadiusCirclePercentage: 50%;
+$containerBorderRadius: 8px;
+$profileBorderRadius: 8px;
+$inputBorderRadius: 10px;
+$btnBorderRadius: 8px;
+$checkboxRadius: 6px;
+$checkboxRadiusSmall: 5px;
+$inputBorderRadiusSmall: 8px;
+$iconContaierBorderRadius: 4px;
+
+/* Borders */
+
+/* Fonts */
+$Circular: 'Circular Std', 'sans-serif';
+$Inter: 'Inter', 'sans-serif';
+
+/* Shadows */
+$shadow: 0 4px 8px rgba(0, 0, 0, 0.2),0 6px 20px rgba(0, 0, 0, 0.19);
+$cardShadow: 4px 4px 30px rgba(0, 0, 0, 0.15);
+
+/* Transition */
+$transitionSpeed: .25s;
+$ease: ease-in-out;

@@ -1,0 +1,150 @@
+.allPaymentMethodsSection {
+    padding: 16px 0;
+
+    h5 {
+        margin-bottom: 16px;
+    }
+
+    .allPaymentMethodsContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .card {
+            flex: 100%;
+            max-width: 492px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px;
+            background: $whitef1;
+            border-radius: $containerBorderRadius;
+            margin-bottom: 16px;
+        }
+    }
+
+    .addnewPaymentMethodBtnContainer {
+        margin: 0 0 16px;
+    }
+
+    .addnewPaymentMethodBtn {
+        padding: 8px 26px;
+    }
+}
+
+.card {
+    .cardIconContainer {
+        display: inline-block;
+        padding: 8px;
+        background: $white;
+        border-radius: $iconContaierBorderRadius;
+    }
+
+    .cardContentContainer {
+        h6 {
+            color: $cardHeadingColor;
+        }
+
+        p {
+            color: $hintTextColor2;
+        }
+    }
+
+    .defaultStatus {
+        padding: 6px 16px;
+        color: $primary;
+        border: 1px solid $primary;
+        background: rgba(182, 149, 56, 0.2);
+        border-radius: 16px;
+    }
+
+    .cardBtns {
+        margin-bottom: 4px;
+        display: flex;
+        color: $textSecondary;
+
+        button {
+            margin-right: 8px;
+
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+}
+
+.taxInfoContainer {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .taxInfo,
+    .vatGst {
+        flex: 100%;
+        max-width: 492px;
+        padding: 24px;
+        background: $whitef1;
+        border-radius: $containerBorderRadius;
+    }
+}
+
+.taxInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    button {
+        color: $hintTextColor2;
+
+        &:hover {
+            color: $primary;
+        }
+    }
+}
+
+.vatGst {
+    button {
+        color: $primary;
+        //padding-bottom: 2px;
+        border-bottom: 2px solid $primary;
+    }
+
+}
+
+@include media($lg) {
+
+    .allPaymentMethodsSection {
+        padding: 32px 0;
+
+        h5 {
+            margin-bottom: 32px;
+        }
+
+        .allPaymentMethodsContainer {
+            flex-direction: row;
+            justify-content: space-between;
+
+            .card {
+                flex: 48%;
+            }
+        }
+
+        .addnewPaymentMethodBtnContainer {
+            margin-top: 24px;
+        }
+    }
+
+    .taxInfoContainer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+
+        .taxInfo,
+        .vatGst {
+            flex: 48%;
+        }
+    }
+}

@@ -1,0 +1,175 @@
+.topContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 0;
+
+    &>div {
+        flex: 100%;
+        max-width: 360px;
+        margin-bottom: 16px;
+    }
+}
+
+.searchContainer {
+    position: relative;
+
+    input[type="search"] {
+        padding-left: 44px;
+    }
+
+    .searchIcon {
+        position: absolute;
+        padding: 16px;
+    }
+}
+
+.inviteContainer {
+    .howToInviteContainer {
+        margin: 16px 0;
+    }
+
+    .select {
+        display: inline-block;
+        font-size: 14px;
+        margin-right: 16px;
+    }
+
+    button {
+        color: $white;
+        background: $primary;
+
+        &:hover {
+            box-shadow: $cardShadow;
+        }
+    }
+}
+
+.contentContainer{
+    padding-bottom: 0;
+}
+
+.users {
+    width: 100%;
+    //overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    margin-bottom: 24px;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.userRows {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr;
+    grid-column-gap: 16px;
+    align-items: center;
+    color: $textSecondary;
+
+    .name{
+        font-weight: 500;
+        color: $textPrimary;
+    }
+
+    .statusContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 5px;
+        align-items: center;
+        font-size: 12px;
+
+        button{
+            color: $hintTextColor2;
+        }
+    }
+
+    .status{
+        padding: 6px 16px;
+        background: $smallItemBackground;
+        border-radius: 16px;
+        color: $primary;
+    }
+}
+
+.icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: $smallItemBackground;
+    border-radius: $borderRadiusCirclePercentage;
+    color: $primary;
+    margin-right: 4px;
+}
+
+.inviteBottomBtn{
+    display: flex;
+    align-items: center;
+}
+
+.inviteBottomPlus{
+    background: $primary;
+    color: $white;
+    font-size: 32px;
+    font-weight: 400;
+    margin-right: 8px;
+}
+
+.inviteBottomText{
+    color: $primary;
+    font-weight: 500;
+}
+
+.roleContainer {
+    display: flex;
+    align-items: center;
+    color: $textSecondary;
+
+    .roleNameContainer{
+        position: relative;
+    }
+
+    .role {
+        text-transform: capitalize;
+        margin-right: 6px;
+    }
+
+    .roleBtns{
+        margin-bottom: 4px;
+        display: flex;
+
+        button{
+            margin-right: 8px;
+
+            &:hover{
+                color: $primary;
+            }
+        }
+    }
+
+    .editRoleBtnContainer{
+        position: relative;
+    }
+}
+
+@include media($lg) {
+    .topContainer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        &>div {
+            flex: 50%;
+            margin-bottom: 0;
+        }
+    }
+
+    .inviteContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}

@@ -1,0 +1,61 @@
+.editDropdownContainer{
+    top: 32px;
+    left: 0;
+    transform: translateX(-40%);
+}
+
+.modal {
+    position: relative;
+    padding: 8px 16px;
+    background: $white;
+    border-radius: $profileBorderRadius;
+    flex: 80%;
+    width: 227px;
+    box-shadow: $shadow;
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 10px solid $white;
+        border-top-color: transparent;
+        border-left-color: transparent;
+        border-right-color: transparent;
+    }
+}
+
+.dropdownRoleContainer{
+    padding: 2px 0 16px;
+    border-bottom: 1px solid $divider1;
+
+    &:last-child{
+        border: 0;
+    }
+}
+
+.dropdownRoleContainerLabel{
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+
+    .radioInputContainer{
+        flex: 25px;
+        max-width: 25px;
+    }
+
+    .radioTextContainer{
+        line-height: 100%;
+
+        h6{
+            text-transform: capitalize;
+            color: $radioLabel;
+            margin-bottom: 8px;
+        }
+
+        p{
+            color: $textSecondary;
+        }
+    }
+}

@@ -1,0 +1,108 @@
+.modal {
+    padding: 16px;
+    background: $white;
+    border-radius: $profileBorderRadius;
+    flex: 80%;
+    max-width: 600px;
+
+    .icon {
+        display: flex;
+        justify-content: flex-end;
+        color: $primary;
+        margin-bottom: 6px;
+
+        span {
+            display: inline-block;
+            cursor: pointer;
+        }
+    }
+
+    h5 {
+        color: $textPrimary;
+    }
+
+    .formContentContainer {
+        padding: 24px 0 16px;
+        margin-bottom: 16px;
+        border-bottom: 1px solid $underlineColor;
+    }
+
+    .rolesContainer {
+        padding-top: 16px;
+    }
+
+
+    .dropdownRoleContainer {
+        padding: 2px 0 16px;
+    }
+
+    .dropdownRoleContainerLabel {
+        display: flex;
+        align-items: flex-start;
+        cursor: pointer;
+
+        .radioInputContainer {
+            flex: 25px;
+            max-width: 25px;
+        }
+
+        .radioTextContainer {
+            line-height: 100%;
+
+            h6 {
+                text-transform: capitalize;
+                color: $radioLabel;
+                margin-bottom: 8px;
+            }
+
+            p {
+                color: $textSecondary;
+            }
+        }
+    }
+
+    button {
+        display: inline-block;
+        font-family: $Circular;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 24px;
+        border-radius: 4px;
+        padding: 8px 16px;
+        background: $primary;
+        color: $white;
+
+        &:hover {
+            box-shadow: $cardShadow;
+        }
+    }
+
+    .noBtn {
+        margin-left: 16px;
+        color: $btnTextColor1;
+        background: $whitef1;
+    }
+}
+
+@include media($lg) {
+    .modal {
+        .formContentContainer {
+            margin-bottom: 32px;
+        }
+    }
+
+    .content {
+        padding: 16px 32px;
+
+        .inputsContainer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            div {
+                flex: 47.5%;
+                max-width: 47.5%;
+            }
+        }
+    }
+}

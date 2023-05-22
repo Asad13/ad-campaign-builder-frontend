@@ -1,0 +1,72 @@
+:export {
+  textColor: $white;
+  backgroundColor: $colorDanger;
+}
+
+.formItemRoot {
+  margin: 18px 0 0;
+  @include underline($shift: 4px);
+
+profile-page-address
+  input[type="email"] {
+    padding-left: 55px;
+    cursor: not-allowed;
+    opacity: 0.75;
+    margin-bottom: 18px;
+  }
+
+  .emailIcon {
+    position: absolute;
+    padding: 15px 16px;
+  }
+
+  .selectsContainer {
+    display: flex;
+  }
+
+  .selectContainer {
+    display: inline-block;
+    margin-right: 16px;
+  }
+
+  .select {
+    display: inline-block;
+    font-size: 14px;
+  }
+}
+
+.file {
+  appearance: none;
+  visibility: hidden;
+  width: 0;
+}
+
+.profilePicLabel {
+  cursor: pointer;
+  margin-left: 16px;
+  color: $primary;
+}
+
+.image {
+  width: 54px;
+  height: 54px;
+  margin-right: 16px;
+}
+
+.btnAddAddressnew {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 18px;
+  margin-left: 104px;
+  margin-bottom: 46px;
+  color: #858585;
+  font-weight: normal;
+  svg {
+    color: #b69538;
+  }
+  span {
+    display: inline-block;
+    margin-left: 8px;
+  }
+}

@@ -1,0 +1,492 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Circular Std';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: $background;
+    min-height: 100vh;
+}
+
+.img {
+    max-inline-size: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.extLink {
+    color: $primary;
+    padding-bottom: 2px;
+    border-bottom: 2px solid $primary;
+}
+
+.extLinkWithIcon {
+    display: flex;
+    align-items: baseline;
+    color: $primary;
+
+    span {
+        margin-right: 4px;
+    }
+}
+
+.pageLoaderContainer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dataLoadingLoaderConatiner {
+    @extend .pageLoaderContainer;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: $modalBackground;
+    z-index: 21;
+}
+
+.container {
+    width: 100%;
+    max-width: 1170px;
+    margin: $profileMarginSmall;
+}
+
+.section-container {
+    width: 100%;
+    max-width: 1170px;
+    padding: $profilePaddingSmall;
+    background: $white;
+    border-radius: $containerBorderRadius;
+}
+
+@include media($xl) {
+
+    .section-container {
+        padding: $profilePaddingBig $profilePaddingBig $profilePaddingSmall $profilePaddingBig;
+    }
+}
+
+.textWithIcon {
+    display: flex;
+    align-items: center;
+
+    span {
+        margin-right: 4px;
+    }
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+.underline {
+    span {
+        position: relative;
+        @include text-decor(6px, $bottom: 0.35rem);
+    }
+}
+
+.profileImage {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: $borderRadiusCircle;
+    vertical-align: middle;
+    overflow: hidden;
+
+    img {
+        max-inline-size: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+%inputCore {
+    width: 100%;
+    background: $whitef1;
+    border: 1px solid transparent;
+
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.75;
+    }
+
+    &:focus {
+        outline: 2px solid $primary !important;
+    }
+}
+
+.input {
+    @extend %inputCore;
+    border-radius: $inputBorderRadius;
+    padding: $inputPadding;
+}
+
+.inputWithIcon {
+    padding-left: 55px;
+}
+
+.inputIcon {
+    position: absolute;
+    padding: 15px 16px;
+}
+
+input[type="checkbox"].custom-checkbox,
+input[type="radio"].custom-radio {
+    appearance: none;
+    display: none;
+}
+
+input[type="checkbox"]+label,
+input[type="radio"]+label {
+    cursor: pointer;
+}
+
+input[type="checkbox"]:disabled,
+input[type="radio"]:disabled {
+    cursor: not-allowed;
+    opacity: 0.75;
+
+    &+label {
+        cursor: not-allowed;
+        opacity: 0.75;
+    }
+}
+
+.fullWidthLabel {
+    display: inline-block;
+    width: 100%;
+}
+
+// .fullWidthLabelWithIcon {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+// }
+
+.inputMedium {
+    @extend %inputCore;
+    padding: $inputPadding3;
+    border-radius: $inputBorderRadiusSmall;
+}
+
+.inputSmall {
+    padding: $inputPadding2;
+    border-radius: $inputBorderRadiusSmall;
+}
+
+%customCheckboxRadio {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    background: $white;
+    border: 1px solid $checkboxBorderColor;
+    color: $primary;
+
+    &:hover,
+    &:focus {
+        border-color: $primary;
+    }
+
+    &.custom-checkbox-selected,
+    &.custom-radio-selected {
+        border: 1px solid $primary;
+    }
+}
+
+.custom-checkbox-radio-container {
+    &:hover {
+        color: $primary;
+
+        label {
+            color: $primary;
+        }
+
+        %customCheckboxRadio {
+            border-color: $primary;
+        }
+    }
+}
+
+.custom-checkbox-box,
+.custom-radio-outer {
+    @extend %customCheckboxRadio;
+    width: 17px;
+    height: 17px;
+    margin-bottom: 4px;
+    margin-right: 9px;
+    border-radius: $checkboxRadius;
+}
+
+%customCheckboxInner {
+    display: inline-block;
+    background: $primary;
+}
+
+.custom-checkbox-inner {
+    @extend %customCheckboxInner;
+    width: 9px;
+    height: 9px;
+    border-radius: 3px;
+}
+
+.custom-checkbox-box-small {
+    width: 16px !important;
+    height: 16px !important;
+    margin-bottom: 0;
+    margin-right: 6px;
+}
+
+.custom-checkbox-box-tiny {
+    @extend %customCheckboxRadio;
+    width: 15px;
+    height: 15px;
+    margin-bottom: 0;
+    margin-right: 6px;
+    border-radius: $checkboxRadiusSmall;
+}
+
+.custom-checkbox-inner-tiny {
+    @extend %customCheckboxInner;
+    width: 7px;
+    height: 7px;
+    border-radius: 2px
+}
+
+.custom-radio-outer {
+    width: 16px;
+    height: 16px;
+    margin-bottom: 2px;
+    border-radius: $borderRadiusCircle;
+}
+
+.custom-radio-inner {
+    width: 6px;
+    height: 6px;
+    background: $primary;
+    border-radius: $borderRadiusCircle;
+}
+
+.checkbox-radio-color {
+    &+label {
+        color: $textPrimary;
+    }
+
+    &:not(:disabled) {
+
+        &:hover+label,
+        &:focus+label {
+            color: $primary;
+        }
+
+        &+label {
+
+            &:hover,
+            &:focus {
+                color: $primary;
+            }
+        }
+    }
+}
+
+.checkbox-radio-color:checked {
+    &+label {
+        color: $primary;
+    }
+}
+
+.custom-file {
+    display: none;
+}
+
+.form-field-error {
+    border: 1px solid $colorDanger;
+    border-radius: $inputBorderRadius;
+
+    &:focus {
+        outline: 1px solid $colorDanger !important;
+    }
+}
+
+.hover-effect-primary {
+    color: $textPrimary;
+
+    &:hover,
+    &:focus {
+        color: $primary;
+    }
+}
+
+.hover-effect-secondary {
+    color: $textSecondary;
+
+    &:hover,
+    &:focus {
+        color: $primary;
+    }
+}
+
+.error-msg {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    color: $colorDanger;
+    padding: 2px 0 2px 4px;
+    height: 18px;
+    max-height: fit-content;
+}
+
+progress.custom-progress {
+    width: 100%;
+    appearance: none;
+    height: 8px;
+    border-radius: $inputBorderRadiusSmall;
+}
+
+progress.custom-progress::-webkit-progress-bar {
+    width: 100%;
+    height: 8px;
+    background: $progressBackground;
+    border-radius: $inputBorderRadiusSmall;
+}
+
+progress.custom-progress::-webkit-progress-value {
+    height: 8px;
+    background: $primary;
+    border-radius: $inputBorderRadiusSmall;
+}
+
+.topLabel {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.formBtn {
+    border-radius: $btnBorderRadius;
+    padding: $btnPadding;
+}
+
+
+
+.primaryBtn {
+    display: inline-block;
+    background: $primary;
+    padding: 8px 26px;
+    border-radius: 6px;
+    font-family: $Circular;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    color: $white;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: $cardShadow;
+    }
+}
+
+.hint {
+    margin-top: 6px;
+    margin-left: 8px;
+    color: $hintTextColor;
+}
+
+.tab {
+    color: $textPrimary;
+    padding: 8px 12px;
+    margin-right: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+
+    &.selected {
+        color: $primary;
+        background: #F5F1E5;
+    }
+}
+
+.notAllowed{
+    cursor: not-allowed;
+    opacity: 0.75;
+}
+
+.notAllowedTextColor{
+    color: $textSecondary;
+}
+
+.modalContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: $modalBackground;
+    z-index: 21;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdownContainer {
+    position: absolute;
+    z-index: 21;
+}
+
+.iconContainerCircle {
+    display: inline-block;
+    border-radius: $borderRadiusCircle;
+}
+
+.pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination__link--page {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    margin: 0 4px;
+    justify-content: center;
+    align-items: center;
+    color: #858585;
+    border-radius: $borderRadiusCircle;
+
+    &:hover:not(.pagination__link--break) {
+        color: $primary;
+    }
+}
+
+.pagination__link {
+    color: #858585;
+
+    &:hover {
+        color: $primary;
+    }
+
+}
+
+.pagination__link--active {
+    color: $primary !important;
+    border-radius: $borderRadiusCircle;
+    background: #FAF6EB;
+}
+
+.empty {
+    color: $colorDanger !important;
+    text-align: center;
+}

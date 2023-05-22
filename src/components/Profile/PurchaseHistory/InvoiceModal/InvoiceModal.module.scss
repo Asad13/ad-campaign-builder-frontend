@@ -1,0 +1,303 @@
+.modal {
+    padding: 16px;
+    background: $white;
+    border-radius: $profileBorderRadius;
+    flex: 80%;
+    max-width: 600px;
+    max-height: 95%;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .contentContainer,
+    .btnContainer {
+        padding: 0 16px;
+    }
+
+    .btnContainer {
+        margin-bottom: 16px;
+    }
+
+    .item {
+        @include underline($shift: 20px);
+    }
+
+    .icon {
+        display: flex;
+        justify-content: flex-end;
+        color: $primary;
+        margin-bottom: 6px;
+
+        span {
+            display: inline-block;
+            cursor: pointer;
+        }
+    }
+
+    p {
+        color: $textSecondary;
+    }
+
+    button {
+        display: inline-block;
+        font-family: $Circular;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+        border-radius: 6px;
+        padding: 10px 20px;
+        background: $primary;
+        color: $white;
+
+        &:hover {
+            box-shadow: $cardShadow;
+        }
+    }
+
+    .noBtn {
+        margin-left: 16px;
+        color: $btnTextColor1;
+        background: $whitef1;
+    }
+}
+
+.addresses,
+.invoiceInfos {
+    display: flex;
+    flex-direction: column;
+}
+
+.addresses {
+    margin-bottom: 6px;
+
+    h6 {
+        margin-bottom: 6px;
+    }
+}
+
+.addresseFrom {
+    margin-bottom: 16px;
+    border-bottom: 1px solid $underlineColor;
+}
+
+.addresseTo {
+    margin-top: 16px;
+}
+
+.invoiceInfos {
+    .invoiceInfosContent {
+        flex: 100%;
+        max-width: 100%;
+        padding: 16px 0;
+
+        &:nth-child(1) {
+            border-bottom: 1px solid $underlineColor;
+        }
+
+        &:nth-child(2) {
+            border-bottom: 1px solid $underlineColor;
+        }
+    }
+
+    .invoiceInfosStatus {
+        p {
+            text-transform: capitalize;
+        }
+    }
+}
+
+.invoiceItems {
+    width: 100%;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    margin-bottom: 24px;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.invoiceItemHeadingFooter {
+
+    h6,
+    p {
+        font-weight: 500;
+        color: $textPrimary;
+    }
+}
+
+.invoiceItemRows {
+    display: grid;
+    grid-template-columns: 2fr 10fr 3fr;
+    grid-column-gap: 16px;
+    align-items: center;
+    color: $textSecondary;
+
+    .description {
+        font-weight: 500;
+        color: $cardHeadingColor;
+    }
+
+    .amount {
+        text-align: right;
+    }
+}
+
+@include media($lg) {
+    .modal {
+        padding: 32x;
+
+        .contentContainer,
+        .btnContainer {
+            padding: 0 32px;
+        }
+
+        .btnContainer {
+            margin-bottom: 32px;
+        }
+    }
+
+    .addresses,
+    .invoiceInfos {
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .addresses {
+
+        .addresseFrom,
+        .addresseTo {
+            flex: 50%;
+            max-width: 50%;
+        }
+    }
+
+    .addresseFrom {
+        margin-bottom: none;
+        border-bottom: none;
+        padding-right: 32px;
+        border-right: 1px solid $underlineColor;
+    }
+
+    .addresseTo {
+        margin-top: 0;
+        padding-left: 32px;
+    }
+
+    .invoiceInfos {
+        justify-content: space-between;
+
+        .invoiceInfosContent {
+            flex: 30%;
+            max-width: 30%;
+            padding: 0;
+
+            &:nth-child(1) {
+                border-bottom: none;
+                border-right: 1px solid $underlineColor;
+            }
+
+            &:nth-child(2) {
+                border-bottom: none;
+            }
+
+            &:nth-child(3) {
+                border-left: 1px solid $underlineColor;
+            }
+
+            div {
+                display: inline-block;
+            }
+        }
+
+        .invoiceInfosMethod {
+            display: flex;
+            justify-content: center;
+        }
+
+        .invoiceInfosStatus {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}
+
+@media print {
+    .item {
+        @include underline($shift: 20px);
+    }
+
+    .contentContainer {
+        padding: 32px;
+        ;
+    }
+
+    .addresses,
+    .invoiceInfos {
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .addresses {
+
+        .addresseFrom,
+        .addresseTo {
+            flex: 50%;
+            max-width: 50%;
+        }
+    }
+
+    .addresseFrom {
+        margin-bottom: none;
+        border-bottom: none;
+        padding-right: 32px;
+        border-right: 1px solid $underlineColor;
+    }
+
+    .addresseTo {
+        margin-top: 0;
+        padding-left: 32px;
+    }
+
+    .invoiceInfos {
+        justify-content: space-between;
+
+        .invoiceInfosContent {
+            flex: 30%;
+            max-width: 30%;
+            padding: 0;
+
+            &:nth-child(1) {
+                border-bottom: none;
+                border-right: 1px solid $underlineColor;
+            }
+
+            &:nth-child(2) {
+                border-bottom: none;
+            }
+
+            &:nth-child(3) {
+                border-left: 1px solid $underlineColor;
+            }
+
+            div {
+                display: inline-block;
+            }
+        }
+
+        .invoiceInfosMethod {
+            display: flex;
+            justify-content: center;
+        }
+
+        .invoiceInfosStatus {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}

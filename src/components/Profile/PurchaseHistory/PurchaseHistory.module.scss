@@ -1,0 +1,42 @@
+.outerContainer{
+    padding-bottom: 24px;
+}
+
+.contentContainer{
+    padding-bottom: 0;
+}
+
+.paginationContainer{
+    margin-top: 24px;
+}
+
+.purchases {
+    width: 100%;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    margin-bottom: 24px;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.purchaseRows {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    grid-column-gap: 16px;
+    align-items: center;
+    color: $textSecondary;
+
+    .description{
+        font-weight: 500;
+        color: $cardHeadingColor;
+    }
+
+    .receipt{
+        font-weight: 500;
+        color: $primary;
+        cursor: pointer;
+    }
+}

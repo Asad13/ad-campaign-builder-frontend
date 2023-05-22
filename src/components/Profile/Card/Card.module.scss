@@ -1,0 +1,167 @@
+.formItemRoot {
+    margin: 18px 0 0;
+    @include underline($shift: 4px);
+
+    // .selectsContainer{
+    //     display: flex;
+    // }
+
+    // .selectContainer{
+    //     display: inline-block;
+    //     margin-right: 16px;
+    // }
+
+    // .select{
+    //     display: inline-block;
+    //     font-size: 14px;
+    // }
+}
+
+.formInputContainer {
+    width: 100%;
+    max-width: 512px;
+
+    label {
+        color: $labelColor;
+    }
+}
+
+.cardFieldsContainer,
+.statesFieldsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .cardFieldsLeft,
+    .statesFieldsLeft {
+        flex: 100%;
+        max-width: 512px;
+    }
+
+    .cardFieldsRight,
+    .statesFieldsRight {
+        flex: 100%;
+        display: flex;
+
+        div{
+            margin-right: 16px;
+            flex: 47.5%;
+            max-width: 120px;
+        }
+    }
+}
+
+.emailInputContainer{
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.emailDeleteBtn{
+    color: $textSecondary;
+    right: 0px;
+}
+
+.addEmailBtnContainer {
+    margin-bottom: 12px;
+
+    .addEmailBtn {
+        font-weight: 600;
+        color: $btnTextColor2;
+
+        span {
+            font-size: 18px;
+        }
+
+        &:hover{
+            color: $primary;
+        }
+    }
+}
+
+.countrySelectContainer{
+    position: relative;
+}
+
+.countrySelect{
+    width: 100%;
+    background: $whitef1;
+    border: 1px solid transparent;
+    box-shadow: none;
+    outline: none;
+    border-radius: $inputBorderRadius;
+    padding: 9px;
+
+    &:focus {
+        outline: 2px solid $primary !important;
+    }
+}
+
+.formBtnsContainer {
+    margin: 24px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.default {
+    background: $whitef1;
+    padding: 12px;
+    border-radius: $btnBorderRadius;
+
+    .defaultText {
+        font-family: $Circular;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 28px;
+        color: $btnTextColor1;
+    }
+}
+
+.defaultCard{
+    background: $primary;
+
+    .defaultText {
+        color: $white;
+    }
+}
+
+.btnsContainer{
+    margin-top: 16px;
+    padding: 0;
+}
+
+@include media($lg) {
+
+    .cardFieldsContainer,
+    .statesFieldsContainer {
+        flex-direction: row;
+        align-items: flex-start;
+
+        .cardFieldsLeft,
+        .statesFieldsLeft {
+            flex: 80%;
+            max-width: 384px;
+            margin-right: 16px;
+        }
+
+        .cardFieldsRight,
+        .statesFieldsRight {
+            flex: 15%;
+            flex-direction: column;
+
+            div {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .formBtnsContainer {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .btnsContainer{
+        margin-top: 0;
+    }
+}

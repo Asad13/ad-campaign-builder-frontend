@@ -1,0 +1,71 @@
+.modal {
+  padding: 16px;
+  background: $white;
+  border-radius: $profileBorderRadius;
+  flex: 80%;
+  max-width: 360px;
+  width: 100%;
+  text-align: center;
+
+  .icon {
+    display: flex;
+    justify-content: flex-end;
+    color: $primary;
+    margin-bottom: 6px;
+
+    span {
+      display: inline-block;
+      cursor: pointer;
+    }
+  }
+
+  h3 {
+    color: $primary;
+    line-height: 100%;
+    margin-bottom: 16px;
+  }
+
+  p {
+    font-family: $Inter;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: $textSecondary;
+    margin-bottom: 16px;
+  }
+
+  button {
+    display: inline-block;
+    font-family: $Circular;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    border-radius: 4px;
+    padding: 8px 16px;
+    background: $primary;
+    color: $white;
+
+    &:hover {
+      box-shadow: $cardShadow;
+    }
+  }
+}
+.noButton {
+  background: #f1f1f1 !important;
+  border-radius: 8px;
+  color: #747474 !important;
+}
+.buttonBox {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+@include media($lg) {
+  .modal {
+    padding: 32px;
+
+    p {
+      font-size: 18px;
+    }
+  }
+}

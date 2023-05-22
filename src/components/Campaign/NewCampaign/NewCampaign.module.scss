@@ -1,0 +1,597 @@
+:export {
+    textColor: $white;
+    backgroundColor: $primary;
+}
+
+.containerNew {
+    position: relative;
+    width: 100%;
+    padding-left: 0;
+    margin-top: 0;
+
+    h3 {
+        line-height: 100%;
+    }
+}
+
+.tabContainer {
+    margin: 16px 0;
+}
+
+.tabpanel,
+.budgetContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .left {
+        flex: 100%;
+        max-width: 100%;
+    }
+
+    .right {
+        flex: 100%;
+        max-width: 100%;
+        margin-top: 16px;
+    }
+}
+
+.budgetLabel {
+    font-size: 12px;
+    color: $textSecondary;
+}
+
+.budgetContainer {
+
+    .budgetFieldsContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        div {
+            margin-bottom: 12px;
+        }
+
+    }
+
+    .separator {
+        font-size: 12px;
+        color: $textSecondary;
+        margin: 10px 5px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    .fieldContainer {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+.categoryContainer {
+    margin-top: 16px;
+}
+
+.daysCheckboxContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.daysCheckboxWrapper {
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 16px;
+}
+
+.screenSelectionCard {
+    padding-bottom: 32px;
+}
+
+.categoryTop {
+    margin-bottom: 16px;
+}
+
+.categoryOuterContainer {
+    padding: 0;
+    margin: 0;
+    padding-right: 10px;
+    border-bottom: 1px solid $borderColor2;
+}
+
+.categoryInnerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.categoryCheckboxContainer {
+    margin: 16px 0;
+    flex: 1 0 auto;
+}
+
+.categoryIcon {
+    cursor: pointer;
+}
+
+.subcategoryContainer {
+    padding-left: 24px;
+    max-height: 0;
+    overflow-y: hidden;
+    transition: all $transitionSpeed $ease;
+}
+
+.showSubcategory {
+    max-height: fit-content;
+    padding-bottom: 8px;
+}
+
+.subCheckboxContainer {
+    padding-bottom: 8px;
+}
+
+.categoryLabel {
+    line-height: 100%;
+}
+
+
+.divider {
+    @include underline($shift: 4px);
+}
+
+.radioContainer {
+    display: flex;
+    padding: 8px 0 0;
+    flex-direction: column;
+
+    div {
+        flex: 100%;
+        max-width: 100%;
+
+        &:first-child {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.radioLabel {
+    color: $radioLabel;
+}
+
+.inputDate {
+    cursor: pointer;
+    padding: 8px 12px;
+}
+
+.inputTime {
+    margin-bottom: 16px;
+}
+
+.spacing {
+    margin-top: 16px;
+}
+
+.rangeBtnContainer {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 6px;
+}
+
+.btn {
+    padding: 8px 12px;
+    background: $sideNavIconBackground;
+    color: $primary;
+    border-radius: $checkboxRadius;
+}
+
+.btnContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    margin: 32px 0 16px;
+
+    button {
+        display: inline-block;
+        font-family: $Circular;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        border-radius: 4px;
+        padding: 14px 30px;
+
+        &:disabled {
+            cursor: not-allowed;
+            opacity: 0.75;
+        }
+
+        &:hover:not(:disabled) {
+            box-shadow: $cardShadow;
+        }
+    }
+}
+
+.saveBtn {
+    background: $white;
+    color: $primary;
+    margin-bottom: 24px;
+}
+
+.activateBtn {
+    background: $primary;
+    color: $white;
+    margin-bottom: 24px;
+}
+
+.radiusContainer {
+    background: $whitef1;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.addressHint {
+    font-size: 12px;
+    color: $textSecondary;
+    line-height: 140%;
+}
+
+.btnAddAddress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: $btnPadding2;
+    background: $primary;
+    color: $white;
+    border-radius: $btnBorderRadius;
+    margin-top: 18px;
+
+    span {
+        display: inline-block;
+        margin-left: 8px;
+    }
+}
+
+.address {
+    margin-top: 16px;
+}
+
+.addressRow {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+
+    .addressInput {
+        flex: 100%;
+        max-width: 100%;
+    }
+
+    .addressSelect {
+        margin-bottom: 18px;
+        cursor: pointer;
+    }
+
+    input {
+        background: $white;
+    }
+}
+
+.select {
+    display: inline-block;
+    font-size: 14px;
+}
+
+.radiusRangeContainer {
+    margin-top: 18px;
+
+    p {
+        margin-top: 4px;
+    }
+}
+
+.radiusRangeWrapper {
+    background: $white;
+    padding: $inputPadding2;
+    border-radius: $inputBorderRadiusSmall;
+}
+
+.slider {
+    appearance: none;
+    width: 100%;
+    height: 3px;
+    border-radius: 5px;
+    background: linear-gradient(to right, $primary 0%, rgba(255, 254, 251, 0.2) 0%);
+    outline: none;
+    transition: all .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    position: relative;
+    appearance: none;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: $primary;
+    border: 2px solid $white;
+    outline: 2px solid $primary;
+    cursor: pointer;
+}
+
+.drawContainer {
+    background: $whitef1;
+    border-radius: $containerBorderRadius;
+    padding: 32px 24px;
+}
+
+.drawHeading {
+    display: flex;
+
+    .drawInfoIconContainer {
+        margin-right: 16px;
+    }
+
+    h4 {
+        line-height: 100%;
+        margin-bottom: 4px;
+    }
+}
+
+.uploadDescContainer {
+    text-align: center;
+    margin: 24px 0;
+
+    h4 {
+        margin: 0 auto;
+        max-width: 333px;
+        color: $black;
+    }
+}
+
+.newCreativesContainer {
+    a {
+        display: inline-flex;
+    }
+}
+
+.uploadOr {
+    margin: 20px 0 16px;
+    font-weight: 700;
+    color: $textSecondary;
+}
+
+.uploadtabContainer {
+    span {
+        display: inline-block;
+        color: $textSecondary;
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+}
+
+.uploadHintContainer {
+    margin-top: 3px;
+
+    p {
+        font-size: 12px;
+        padding-bottom: 16px;
+
+        a {
+            display: inline-block;
+        }
+    }
+}
+
+.uploadCreatives {
+    padding: 24px 16px;
+    background: $whitef1;
+    color: $textPrimary;
+    border-radius: $containerBorderRadius;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        color: $textPrimary;
+        margin-top: 2px;
+    }
+}
+
+.uploadIconContainer {
+    display: inline-block;
+    padding: 10px;
+    border: 6px solid #F9FAFB;
+    border-radius: $borderRadiusCircle;
+}
+
+.uploadLabel {
+    display: inline-block;
+    color: $textSecondary;
+    border-bottom: 2px solid $textSecondary;
+    cursor: pointer;
+
+    &:hover {
+        color: $primary;
+        border-bottom-color: $primary;
+    }
+}
+
+.creativeDisplayContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    border: 1px solid #E4E7EC;
+    padding: $inputPadding;
+    border-radius: $inputBorderRadiusSmall;
+
+    .creativeIconContainer {
+        flex: 8%;
+        max-width: 8%;
+    }
+
+    .creativeStatusContainer {
+        flex: 10%;
+        max-width: 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .creativePrgressbarContainer {
+        flex: 78%;
+        max-width: 78%;
+    }
+
+    h2 {
+        color: $textPrimary;
+    }
+
+    p {
+        color: $textSecondary;
+    }
+}
+
+.creativeIcon {
+    padding: 10px;
+    background: $sideNavIconBackground;
+    color: $primary;
+}
+
+.creativeFinishedIconContainer {
+    margin-bottom: 6px;
+}
+
+.finishedIcon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+}
+
+.creativeFinishedIcon {
+    background: $primary;
+    color: $white;
+}
+
+.creativeLoadingIcon {
+    color: $primary;
+}
+
+.creativeInfo {
+    display: flex;
+    align-items: center;
+    padding: 2px 0;
+
+    p {
+        font-family: $Inter;
+        color: $textSecondary;
+        margin-left: 8px;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 140%;
+    }
+}
+
+.progressContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    div {
+        flex: 85%;
+        max-width: 85%;
+    }
+
+    span {
+        display: inline-block;
+        text-align: center;
+        flex: 12%;
+        max-width: 12%;
+    }
+}
+
+@include media($md) {
+
+    .tabpanel,
+    .budgetContainer {
+        flex-direction: row;
+
+        .left {
+            flex: 15%;
+            max-width: 120px;
+        }
+
+        .right {
+            flex: 80%;
+            max-width: 80%;
+            margin-top: 6px;
+        }
+    }
+
+    .budgetContainer {
+        .budgetFieldsContainer {
+            flex-direction: row;
+
+            div {
+                margin-bottom: 0;
+            }
+        }
+
+        .separator {
+            padding-bottom: 0;
+        }
+
+        .fieldContainer {
+            flex: 45%;
+            max-width: 45%;
+        }
+    }
+
+    .radioContainer {
+        flex-direction: row;
+        justify-content: space-between;
+
+        div {
+            flex: 48%;
+            max-width: 48%;
+
+            &:first-child {
+                margin-bottom: 0px;
+            }
+        }
+    }
+
+    .btnContainer {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .saveBtn {
+        margin-right: 24px;
+    }
+
+    .radiusContainer {
+        padding: 24px;
+    }
+
+    .addressRow {
+        flex-direction: row;
+        justify-content: space-between;
+
+        // .addressInput{
+        //     flex: 48%;
+        //     max-width: 48%;
+        // }
+
+        .addressSelect {
+            margin-bottom: 0;
+        }
+    }
+
+    .radiusRangeContainer {
+        margin-top: 0;
+        flex: 65%;
+        max-width: 65%;
+    }
+}

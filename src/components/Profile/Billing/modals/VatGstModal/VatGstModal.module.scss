@@ -1,0 +1,64 @@
+.modal {
+    padding: 16px;
+    background: $white;
+    border-radius: $profileBorderRadius;
+    flex: 80%;
+    max-width: 360px;
+
+    .contentContainer{
+        padding: 0 16px;
+    }
+
+    .icon {
+        display: flex;
+        justify-content: flex-end;
+        color: $primary;
+        margin-bottom: 6px;
+
+        span {
+            display: inline-block;
+            cursor: pointer;
+        }
+    }
+
+    p {
+        font-family: $Inter;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: $textSecondary;
+        margin: 0 auto;
+        margin-bottom: 16px;
+        max-width: 246px;
+    }
+
+    button {
+        display: inline-block;
+        font-family: $Circular;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 24px;
+        border-radius: 4px;
+        padding: 8px 16px;
+        background: $primary;
+        color: $white;
+
+        &:hover {
+            box-shadow: $cardShadow;
+        }
+    }
+
+    .noBtn{
+        margin-left: 16px;
+        color: $btnTextColor1;
+        background: $whitef1;
+    }
+}
+
+@include media($lg) {
+    .modal {
+        p {
+            font-size: 18px;
+        }
+    }
+}
